@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> Epic Calculator </title>
+    <style>
+        #clear {
+            width: 290px;
+            border: 3px inset rgb(146, 146, 146);
+            border-radius: 3px;
+            padding: 15px;
+            background-color: rgb(122, 121, 121);
+        }
+
+        .calcstyle {
+            width: 300px;
+            height: 500px;
+            margin: auto;
+            border: 3px solid rgb(59, 58, 58);
+            border-radius: 2px;
+            padding: 25px;
+            background-color: rgb(202, 202, 202)
+        }
+
+        input {
+            width: 20px;
+            background-color: rgb(126, 123, 123);
+            color: white;
+            border: 3px inset rgb(146, 146, 146);
+            padding: 28px;
+            margin: 5px;
+            font-size: 15px;
+        }
+
+        #calc {
+            width: 250px;
+            border-radius: 2px;
+            padding: 20px;
+            margin: auto;
+        }
+
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+            margin-top: 100px
+        }
+
+        body {
+            background-image: url('calcbg.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <img src="calcheader.png" class="center">
+    <br> <br>
+
+    <div class="calcstyle">
+        <form name="form">
+            <input id="calc" type="text" name="ans"> <br> <br>
+            <input type="button" value="1" onclick="form.ans.value += '1' ">
+            <input type="button" value="2" onclick="form.ans.value += '2' ">
+            <input type="button" value="3" onclick="form.ans.value += '3' ">
+            <input type="button" value="+" onclick="form.ans.value += '+' ">
+            <br>
+
+            <input type="button" value="4" onclick="form.ans.value += '4' ">
+            <input type="button" value="5" onclick="form.ans.value += '5' ">
+            <input type="button" value="6" onclick="form.ans.value += '6' ">
+            <input type="button" value="-" onclick="form.ans.value += '-' ">
+            <br>
+
+            <input type="button" value="7" onclick="form.ans.value += '7' ">
+            <input type="button" value="8" onclick="form.ans.value += '8' ">
+            <input type="button" value="9" onclick="form.ans.value += '9' ">
+            <input type="button" value="*" onclick="form.ans.value += '*' ">
+            <br>
+
+            <input type="button" value="/" onclick="form.ans.value += '/' ">
+            <input type="button" value="0" onclick="form.ans.value += '0' ">
+            <input type="button" value="." onclick="form.ans.value += '.' ">
+            <input type="button" value="=" onclick="form.ans.value = eval(form.ans.value) ">
+            <br>
+            <input type="button" value="Clear" onclick="form.ans.value = ' ' " id="clear">
+            <br>
+
+        </form>
+    </div>
+</body>
+
+</html>
